@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pembelian Tiket TransJogja</title>
+	<style type="text/css">
+		html, body {
+			width: 100%;
+			height: 100%;
+			background-image: url("bni.jpg");
+			color: navy;
+		}
+	</style>
+</head>
+<body>
+	<script language="JavaScript">
+		<!--
+		function hitungtotal(){
+			var nama = (document.fform.inama.value);
+			var tujuan = (document.fform.itujuan.value);
+			var ht = 0.0;
+			var sub = 0.0;
+			var diskon = 0.0;
+			var total = 0.0;
+			if(tujuan == "1A"){
+				ht = 3000;
+			}
+			else if(tujuan == "1B"){
+				ht = 5000;
+			}
+			else{
+				ht = 10000;
+			}
+			sub = ht;
+			if(document.fform.imember.checked == true){
+				diskon = 0.10*sub;
+			}
+			else{
+				diskon = 0.0;
+			}
+			total = sub-diskon; 
+			document.fform.otiket.value=eval(ht);
+			document.fform.osub.value=eval(sub);
+			document.fform.odiskon.value=eval(diskon);
+			document.fform.ototal.value=eval(total);
+			//gunakan untuk mengecek !!! alert (total);
+			alert("Total Pembayaran : " +total+ "\nSilahkan tunjukkan kartu member anda pada petugas saat pengecekan");
+		}
+	//--></script>
+	<form name="fform">
+		<table border="1px" align="center" width="40%" bgcolor="lightgrey" cellpadding="24">
+			<tr>
+				<td width="100%" colspan="2"><h2 align="center">Pembelian Tiket TransJogja</h2></td>
+			</tr>
+			<tr>
+				<td>Nama</td> 
+				<td><input type="text" size="20" name="inama"></td>
+			</tr>
+			<tr>
+				<td>Tujuan</td>
+				<td><select name="itujuan" size="1">
+						<option value="1A">Trayek 1A</option>
+						<option value="1B">Trayek 1B</option>
+						<option value="2">Trayek 2</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td>Member</td>
+				<td><input type="checkbox" name="imember">Ya<input type="checkbox">Bukan
+</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td width="50%"><pre>
+				Harga Tiket : <input type="text" size="10" name="otiket">
+				Sub Total   : <input type="text" size="10" name="osub">
+				Diskon      : <input type="text" size="10" name="odiskon">
+				Total Bayar : <input type="text" size="10" name="ototal">
+			</td>
+				<tr></tr>
+				<td width="100%" colspan="2">
+					<center>
+						<input type="button" value="Hitung" onclick="hitungtotal()">
+						<input type="reset" value="Ulang">
+					</center>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
